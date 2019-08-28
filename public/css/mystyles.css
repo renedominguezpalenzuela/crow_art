@@ -1,0 +1,44 @@
+/*2048 x 186*/
+body, html {
+    height: 100%;
+}
+
+
+/* define el alto de la linea 2*/
+.lineados {
+  height:82%;
+}
+
+/* define el alto de la linea 1*/
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("../img/header.png") , url("../img/photos/girl.jpg");
+
+  /* Set a specific height */
+  height: 18%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover,contain;
+  position: relative;
+ 
+}
+
+.imagenMapa {
+  background-image: url("../img/mapa.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.imagenWarrior {
+  background-image: url("../img/warrior.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+
+.imagenBoton {
+  background-image: url("../img/unboton.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Project Crow{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+    <link href="{{asset('css/mystyles.css')}}" rel="stylesheet" media="screen">
+
+
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body class="container-fluid">
+
+
+    {#  <div class="row hero-image">
+        <div class="col"> banner superior </div>
+        <img src="{{asset('img/photos/photo1.jpg')}}" class="img-fluid" alt="Responsive image">
+        
+    </div>#}
+
+    <div class="row hero-image">
+        {#  <img src="{{asset('img/photos/photo1.jpg')}}" class="img-responsive" width="15%" height="15%"/>#}
+       {# <img src="{{asset('img/photos/photo1.jpg')}}" class="rounded-circle" width="25%" height="55%"/>#}
+
+      {# <img src="{{asset('img/header.png')}}" class="img-responsive"> #}
+    </div>
+
+    <div class="row lineados">
+
+        {# Menu lateral #}
+        <div class="col-1 imagenWarrior">
+            <table>
+                <tr>
+                    <td class="imagenBoton">Opcion1</td>
+                </tr>
+                <tr>
+                    <td class="imagenBoton">Opcion2</td>
+                </tr>
+                <tr>
+                    <td class="imagenBoton">Opcion3</td>
+                </tr>
+            </table>
+     
+        </div>
+        <div class="col imagenMapa">
+          
+                {% block body %}{% endblock %}
+       
+        </div>
+    </div>
+
+
+
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+
+    {% block javascripts %}{% endblock %}
+</body>
+
+</html>
