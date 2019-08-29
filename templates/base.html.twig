@@ -21,18 +21,19 @@
         
     </div>#}
 
-    <div class="row hero-image">
+    <div class="row header_img">
         {#  <img src="{{asset('img/photos/photo1.jpg')}}" class="img-responsive" width="15%" height="15%"/>#}
-       {# <img src="{{asset('img/photos/photo1.jpg')}}" class="rounded-circle" width="25%" height="55%"/>#}
+        {# <img src="{{asset('img/photos/photo1.jpg')}}" class="rounded-circle" width="25%" height="55%"/>#}
 
-      {# <img src="{{asset('img/header.png')}}" class="img-responsive"> #}
+        {# <img src="{{asset('img/header.png')}}" class="img-responsive"> #}
     </div>
 
     <div class="row lineados">
 
-        {# Menu lateral #}
-        <div class="col-1 imagenWarrior">
-            <table>
+        {# Menu lateral clase: d-none para ocultar #}
+
+        <div class="col-2 leftmenu_img sinespacioaladerecha">
+            {# <table class="table-responsive w-100">
                 <tr>
                     <td class="imagenBoton">Opcion1</td>
                 </tr>
@@ -42,13 +43,26 @@
                 <tr>
                     <td class="imagenBoton">Opcion3</td>
                 </tr>
-            </table>
-     
+            </table>#}
+  
+            {#p-3 padding - espacio interior del boton #}
+            <div class="letra_breathe_fire mt-2">
+                <a class="btn imagenBoton w-100 p-3" href="{{ path('player_army') }}" role="button">
+                    <span class="ml-lg-4 font-weight-bold text-right"> Player's Army</span></a>
+                <a class="btn imagenBoton w-100 p-3" href="{{ path('kingdom_court') }}" role="button">
+                    <span class="ml-lg-4 font-weight-bold">Kingdom Court</span></a>
+                <a class="btn imagenBoton w-100 p-3" href="{{ path('world_map') }}" role="button">
+                    <span class="ml-lg-4 font-weight-bold text-left">World Map</span></a>
+            </div>
+
+
+
+
         </div>
-        <div class="col imagenMapa">
-          
-                {% block body %}{% endblock %}
-       
+        <div id="area_principal" class="col mainpage_img">
+
+            {% block body %}{% endblock %}
+
         </div>
     </div>
 
@@ -59,7 +73,9 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+
+    {% endblock %}
 </body>
 
 </html>

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}World Map{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+    }
+
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+
+    <br>
+    <h1 class="letra_breathe_fire"> World Map</h1>
+{% endblock %}
+
+{% block javascripts %}
+
+{# -- Funciones auxiliares -- #}
+<script src="{{asset('js/utils/globaltools.js')}}"></script>
+
+
+<script>
+    //elimino la clase que define la imagen principal, le adiciono la clase con la nueva imagen
+    let ventana_principal  = $("#area_principal");
+    //.removeClass("mainpage_img")
+    ventana_principal.removeClass("mainpage_img");
+    ventana_principal.addClass("mapa_img");
+    
+</script>
+
+{% endblock %}
